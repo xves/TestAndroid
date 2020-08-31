@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TesteAndroid</string>
+    <string name="connection_off">Sem conexão com a internet</string>
+    <string name="chekin">Check-in realizado com sucesso</string>
+    <string name="share">Compartilhado com sucesso</string>
+    <string name="empty">Nome ou email não podem estar vazio.</string>
+</resources>

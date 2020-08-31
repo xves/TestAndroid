@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_c"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_60"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_chevron_left_black_24dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dim_5"
+            android:gravity="center_vertical"
+            android:text="Eventos"
+            android:layout_toRightOf="@+id/imgBack"
+            android:textColor="#353535"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_toolbar"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_180"
+                    android:layout_alignParentRight="true"
+                    android:layout_above="@+id/list"
+                    android:scaleType="fitXY"
+                    app:layout_collapseMode="parallax" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/title_coments"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"
+                        android:focusable="false"
+                        android:layout_marginBottom="@dimen/dim_5"
+                        android:id="@+id/barra1"/>
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:text="Title"
+                        android:layout_toRightOf="@+id/imgBack"
+                        android:textColor="@color/title"
+                        android:textSize="@dimen/dim_16"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dim_5"
+                        android:background="@color/grey1"
+                        android:focusable="false"
+                        android:id="@+id/barra2"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/recyInferior"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingTop="@dimen/dim_6"
+                    android:text="Description"
+                    android:elevation="@dimen/dim_2"
+                    android:textColor="#888484"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
